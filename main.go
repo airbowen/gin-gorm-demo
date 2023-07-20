@@ -11,8 +11,8 @@ import (
 var err error
 
 func main() {
-
-	Config.DB, err = gorm.Open("mysql", "root:12345678@tcp(127.0.0.1:3306)/test?charset=utf8&parseTime=True&loc=Local")
+	//                                               数据库:密码                     数据表名
+	Config.DB, err = gorm.Open("mysql", "root:root@tcp(127.0.0.1:3306)/test?charset=utf8&parseTime=True&loc=Local")
 
 	if err != nil {
 		fmt.Println("statuse: ", err)
